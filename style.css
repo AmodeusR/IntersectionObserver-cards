@@ -22,7 +22,7 @@ body {
   opacity: 0;
   font-size: calc(1rem + 1vh);
   padding: 1em 1.5em;
-  border: 2px white solid;
+  border: 3px white solid;
   text-align: center;
 
   transition:
