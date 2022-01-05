@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spline sans", sans-serif;
+  background: hsl(240, 5%, 15%);
+  color: white;
+  font-weight: bolder;
+}
+
+.container {
+  display: flex;
+  margin-block: 4rem;
+  margin-inline: auto;
+  gap: 1rem;
+  flex-direction: column;
+  width: min(80%, 25em);
+}
+
+.card {
+  opacity: 0;
+  font-size: calc(1rem + 1vh);
+  padding: 1em 1.5em;
+  border: 2px white solid;
+  text-align: center;
+
+  transition:
+    transform 300ms ease-out,
+    color 300ms ease,
+    border-color 300ms ease,
+    opacity 300ms ease-out;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.card:first-child {
+  --element-color: dodgerblue;
+  color: var(--element-color);
+  border-color: var(--element-color);
+}
+
+.card:nth-child(16) {
+  --element-color: darkorange;
+  color: var(--element-color);
+  border-color: var(--element-color);
+}
+
+.card:nth-child(even) {
+  transform: translateX(-50%);
+}
+
+.card:nth-child(odd) {
+  transform: translateX(50%);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card:hover {
+  --color-change: violet;
+  transform: scale(1.1);
+  color: var(--color-change);
+  border-color: var(--color-change);
+}
+
+.new-card {
+  --element-color: gold;
+  color: var(--element-color);
+  border-color: var(--element-color);
+}
